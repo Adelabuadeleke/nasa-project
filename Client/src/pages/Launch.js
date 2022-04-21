@@ -6,11 +6,11 @@ const Launch = props => {
   // let planets = props.planets
   console.log('lauch:')
   console.log(props.planets)
-  const selectorBody = useMemo(() => {
-    props.planets?.map(planet => 
-      <option value={planet.keplerName} key={planet.keplerName}>{planet.keplerName}</option>
-    );
-  }, []);
+  // const selectorBody = useMemo(() => {
+  //   props.planets?.map(planet => 
+  //     <option value={planet.keplerName} key={planet.keplerName}>{planet.keplerName}</option>
+  //   );
+  // }, []);
 
   const today = new Date().toISOString().split("T")[0];
 
