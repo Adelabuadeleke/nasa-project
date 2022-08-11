@@ -17,13 +17,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Use Nodejs version ${{matrix.node-version}}
-      - uses: actions/setup-node@v2
+        uses: actions/setup-node@v2
         with:
           node-version: ${{matrix.node-version}}
-      - name: Use MongoDB from Giithub actions
-      - uses: supercharge/mongodb-github-action@1.6.0
+        name: Use MongoDB from Giithub actions
+        uses: supercharge/mongodb-github-action@1.6.0
         with:
           mongodb-version: ${{matrix.mongodb-version}}
-      - run: npm install
-      - run: npm run build --prefix client
-      - run: npm test
+        run: npm install
+        run: npm run build --prefix client
+        run: npm test
